@@ -1,4 +1,4 @@
-FROM tomcat:8-jdk17
+FROM tomcat
 LABEL maintainer www.ctnrs.com
 RUN rm -rf /usr/local/tomcat/webapps/*
 ADD . /usr/local/tomcat/webapps
