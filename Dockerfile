@@ -1,4 +1,4 @@
-FROM 563494644/test:v1
+FROM 563494644/tomcat-maven:v1
 LABEL maintainer www.ctnrs.com
 RUN rm -rf /usr/local/tomcat/webapps/*
 ADD . /usr/local/tomcat/webapps
