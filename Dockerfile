@@ -3,7 +3,7 @@ LABEL maintainer www.ctnrs.com
 RUN rm -rf /usr/local/tomcat/webapps/*
 ADD . /usr/local/tomcat/webapps
 RUN ls -l /usr/local/tomcat/webapps
-WORKDIR /usr/local/tomcat/webapps/tomcat-java-demo
+WORKDIR /usr/local/tomcat/webapps
 RUN mvn clean package -Dmaven.test.skip=true -X
 RUN unzip target/*.war -d target/ROOT
 RUN ls -l /usr/local/tomcat/webapps
