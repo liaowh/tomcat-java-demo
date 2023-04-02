@@ -5,5 +5,6 @@ ADD . /usr/local/tomcat/webapps
 WORKDIR /usr/local/tomcat/webapps/tomcat-java-demo
 RUN mvn clean package -Dmaven.test.skip=true 
 RUN unzip target/*.war -d target/ROOT
-ADD target/ROOT /usr/local/tomcat/webapps/ROOT
-#ADD target/*.war /usr/local/tomcat/webapps/ROOT.war
+RUN ls -l /usr/local/tomcat/webapps
+#ADD target/ROOT /usr/local/tomcat/webapps/ROOT
+ADD target/*.war /usr/local/tomcat/webapps/ROOT.war
