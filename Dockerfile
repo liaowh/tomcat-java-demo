@@ -11,5 +11,5 @@ RUN ls -l /usr/local/tomcat/webapps/target
 RUN ls -l /usr/local/tomcat/webapps/target/ROOT
 RUN pwd
 RUN ls -l /usr/local/tomcat/webapps/tomcat-java-demo/target/ROOT
-COPY target/ROOT  /usr/local/tomcat/webapps/ROOT
+COPY /usr/local/tomcat/webapps/target/ROOT  /usr/local/tomcat/webapps/ROOT
 #ADD target/*.war /usr/local/tomcat/webapps/ROOT.war
