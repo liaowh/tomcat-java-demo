@@ -5,6 +5,4 @@ COPY . /usr/local/tomcat/webapps
 WORKDIR /usr/local/tomcat/webapps
 RUN mvn clean package -Dmaven.test.skip=true -X \
    && unzip target/*.war -d target/ROOT \
-   && pwd \
-   && ls -l /usr/local/tomcat/webapps/target/ROOT \
    && mv /usr/local/tomcat/webapps/target/ROOT  /usr/local/tomcat/webapps/ROOT
