@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-demo
+  name: java-demo
   namespace: devlopment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins-demo
+      app: java-demo
   template:
     metadata:
       labels:
-        app: jenkins-demo
+        app: java-demo
     spec:
       containers:
-      - image: 192.168.40.180/jenkins-demo:<BUILD_TAG>
+      - image: 192.168.40.180/java-demo/java-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
-        name: jenkins-demo
+        name: java-demo
         env:
         - name: branch
           value: <BRANCH_NAME>
@@ -28,7 +28,7 @@ metadata:
    namespace: devlopment
 spec:
    selector:
-     app: jenkins-demo
+     app: java-demo
    type: NodePort
    ports:
    - port: 31999
