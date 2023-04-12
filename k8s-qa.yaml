@@ -17,6 +17,8 @@ spec:
       - image: 192.168.40.180/java-demo/java-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
         name: java-demo
+      imagePullSecrets:
+      - name: docker-registry-auth
         env:
         - name: branch
           value: <BRANCH_NAME>
